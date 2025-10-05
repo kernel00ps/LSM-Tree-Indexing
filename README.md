@@ -1,2 +1,2 @@
 # LSM-Tree-Indexing
-Log Structured Merge Tree indexing system
+Log Structured Merge Tree indexing system that supports inserts, logical deletes (tombstones), searches (with and without indexes), and basic aggregation. Each LSM index is configured so that the level 0 tree can hold data for 1000 rows. Each level `i + 1` has a capacity that is 3x the previous level `i` (growth factor = 3). It is assumed that the initial dataset will contain no more that 13 000 rows.
